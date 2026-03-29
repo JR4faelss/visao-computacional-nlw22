@@ -32,9 +32,10 @@ Ao longo do projeto, as aulas foram segmentadas e posteriormente reunidas em uma
   - Implementação de um modelo focado no reconhecimento de gestos.
 
 - **Aula 03:**
-  - Construção de um aplicativo Python final focado em visão computacional.
-  - **Frontend:** Captura de imagens e exposição visual dos resultados de inferência.
-  - **Backend:** Processamento lógico das imagens através dos modelos.
+  - Refatoração total para um web app moderno focado em visão computacional utilizando **FastHTML** e pura leveza com **WebSockets**.
+  - **Frontend Customizado:** Interface premium "Preto e Dourado" contendo painel lateral de controles interativos em tempo real (Qualidade, Landmarks, FPS dinâmico).
+  - **Backend Robusto & Modular:** Separação de lógicas em arquivos independentes dentro do diretório `core/`, garantindo código limpo.
+  - **Super Otimização de Performance:** Multitarefa profunda com `asyncio.to_thread` separando a comunicação de rede da inferência de IA. Além de truques como varredura `VIDEO` ultra-rápida do MediaPipe e redimensionamento via aceleração de hardware GPU.
 
 ### 💡 Experiência
 
@@ -69,9 +70,10 @@ Over the course of the project, the classes were segmented and then unified into
   - Implementation of a model focused on gesture recognition.
 
 - **Class 03:**
-  - Building a complete Python application oriented towards computer vision.
-  - **Frontend:** Image capturing and visually exposing the inference results.
-  - **Backend:** Logical processing of images using the built computer vision models.
+  - Total refactoring bridging to a modern computer vision web app leveraging **FastHTML** and lightning-fast **WebSockets**.
+  - **Custom Frontend:** "Premium Black & Gold" interface containing a dedicated side panel for real-time interactive controls (Compression slider, Landmarks toggler, dynamic FPS tracker).
+  - **Modular & Robust Backend:** Logic cleanly separated into independent files within the `core/` directory, ensuring highly maintainable code.
+  - **Extreme Performance Tuning:** Deep multithreading via `asyncio.to_thread` separating network I/O from AI inference. Built over MediaPipe's ultra-fast `VIDEO` tracker and GPU hardware-accelerated frame resizing to achieve peak frames per second.
 
 ### 💡 Experience
 
