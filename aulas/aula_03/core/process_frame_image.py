@@ -20,6 +20,7 @@ def process_single_image(
     clf,
     label_encoder,
     timestamp_ms: int = None,
+    show_landmarks: bool = True,
 ) -> Tuple[np.ndarray, List[Dict]]:
     """Processa um frame BGR e retorna o frame anotado + lista de detecções.
 
@@ -57,14 +58,15 @@ def process_single_image(
 
     if result.hand_landmarks:
         # Desenha landmarks de TODAS as mãos
-        for i, hand_landmarks in enumerate(result.hand_landmarks):
-            mp_drawing.draw_landmarks(
-                annotated,
-                hand_landmarks,
-                mp_hands.HAND_CONNECTIONS,
-                mp_drawing_styles.get_default_hand_landmarks_style(),
-                mp_drawing_styles.get_default_hand_connections_style(),
-            )
+        if show_landmarks:
+            for i, hand_landmarks in enumerate(result.hand_landmarks):
+                mp_drawing.draw_landmarks(
+                    annotated,
+                    hand_landmarks,
+                    mp_hands.HAND_CONNECTIONS,
+                    mp_drawing_styles.get_default_hand_landmarks_style(),
+                    mp_drawing_styles.get_default_hand_connections_style(),
+                )
 
         # Extrai features (129 valores: num_hands + hand1 + hand2)
         features = extract_features_two_hands(result)
