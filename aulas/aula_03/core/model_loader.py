@@ -5,7 +5,7 @@ import joblib
 import mediapipe as mp
 
 # Pasta de modelos: ../modelos/ relativo a este arquivo
-_MODELS_DIR = Path(__file__).resolve().parent.parent / "modelos"
+_MODELS_DIR = Path(__file__).resolve().parent.parent / "models"
 
 # Caminhos absolutos para os modelos
 MP_MODEL_PATH = str(_MODELS_DIR / "gesture_recognizer.task")

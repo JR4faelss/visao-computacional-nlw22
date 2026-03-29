@@ -2,6 +2,7 @@ const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const statusEl = document.getElementById('status');
 const gestureEl = document.getElementById('gesture_text');
+const gestureImg = document.getElementById('gesture_img');
 
 // Câmera escondida para captura
 const video = document.createElement('video');
@@ -61,6 +62,14 @@ async function start() {
             gestureEl.textContent = data.detections[0].gesture_name + ' (' + Math.round(data.detections[0].probability*100) + '%)';
         } else {
             gestureEl.textContent = '---';
+        }
+
+        // Mostra/esconde a imagem do gesto
+        if (data.image) {
+            gestureImg.src = '/imagens/' + data.image;
+            gestureImg.style.display = 'block';
+        } else {
+            gestureImg.style.display = 'none';
         }
     };
 }

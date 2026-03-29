@@ -85,19 +85,7 @@ def process_single_image(
             ]
             hands_str = " + ".join(hand_labels)
 
-            # Desenha texto no frame
-            color = (0, 255, 0)
-            display_text = f"{gesture_name} ({prediction_prob:.0%})"
-            cv2.putText(
-                annotated, display_text,
-                (20, 50),
-                cv2.FONT_HERSHEY_SIMPLEX, 1.0, color, 2,
-            )
-            cv2.putText(
-                annotated, f"Maos: {hands_str}",
-                (20, 85),
-                cv2.FONT_HERSHEY_SIMPLEX, 0.6, (200, 200, 200), 1,
-            )
+
 
             detections.append({
                 "gesture_name": gesture_name,
