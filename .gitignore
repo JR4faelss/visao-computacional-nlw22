@@ -21,3 +21,5 @@ __pycache__/
 # Ignore image and data folders if needed (optional)
 # aulas/imagens/
 # aulas/data/
+.sesskey
+
